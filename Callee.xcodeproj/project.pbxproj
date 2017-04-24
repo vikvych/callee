@@ -175,10 +175,10 @@
 				468295741EAE33CE00A880DC /* CallProcessor.h */,
 				4682956E1EAE33CE00A880DC /* CallManager.h */,
 				4682956F1EAE33CE00A880DC /* CallManager.m */,
-				468295701EAE33CE00A880DC /* CallManager+CallProcessorDelegate.h */,
-				468295711EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m */,
 				468295721EAE33CE00A880DC /* CallManager+ProviderDelegate.h */,
 				468295731EAE33CE00A880DC /* CallManager+ProviderDelegate.m */,
+				468295701EAE33CE00A880DC /* CallManager+CallProcessorDelegate.h */,
+				468295711EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m */,
 				468295761EAE33CE00A880DC /* DummyCall.h */,
 				468295771EAE33CE00A880DC /* DummyCall.m */,
 				468295781EAE33CE00A880DC /* DummyCallProcessor.h */,
@@ -578,6 +578,7 @@
 				468295381EAE272400A880DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		468295391EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeTests" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +587,7 @@
 				4682953B1EAE272400A880DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4682953C1EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeUITests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +596,7 @@
 				4682953E1EAE272400A880DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

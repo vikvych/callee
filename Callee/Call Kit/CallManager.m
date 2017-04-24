@@ -35,10 +35,14 @@
         _calls = @[];
         _callProcessor = callProcessor;
         _callProcessor.delegate = self;
-        _callController = [[CXCallController alloc] initWithQueue:dispatch_get_main_queue()];
-        _provider = [[CXProvider alloc] initWithConfiguration:[self providerConfiguration]];
         
-        [_provider setDelegate:self queue:nil];
+        if (CALL_KIT_AVAILABLE)
+        {
+            _callController = [[CXCallController alloc] initWithQueue:dispatch_get_main_queue()];
+            _provider = [[CXProvider alloc] initWithConfiguration:[self providerConfiguration]];
+            
+            [_provider setDelegate:self queue:nil];
+        }
     }
     
     return self;
@@ -46,53 +50,117 @@
 
 - (void)reportIncommingCall:(id<CallProtocol>)call completion:(CallHandler)handler
 {
-    CXCallUpdate *update = [CXCallUpdate new];
-    
-    update.remoteHandle = [[CXHandle alloc] initWithType:CXHandleTypePhoneNumber value:call.handle];
-    update.hasVideo = call.hasVideo;
-    
-    if ([call respondsToSelector:@selector(localizedCallerName)])
+    if (CALL_KIT_AVAILABLE)
     {
-        update.localizedCallerName = call.localizedCallerName;
+        CXCallUpdate *update = [CXCallUpdate new];
+        
+        update.remoteHandle = [[CXHandle alloc] initWithType:CXHandleTypePhoneNumber value:call.handle];
+        update.hasVideo = call.hasVideo;
+        
+        if ([call respondsToSelector:@selector(localizedCallerName)])
+        {
+            update.localizedCallerName = call.localizedCallerName;
+        }
+        
+        [self.provider reportNewIncomingCallWithUUID:call.UUID update:update completion:^(NSError * _Nullable error) {
+            if (nil == error) self.calls = [self.calls arrayByAddingObject:call];
+            if (handler) handler(error);
+        }];
     }
-    
-    [self.provider reportNewIncomingCallWithUUID:call.UUID update:update completion:^(NSError * _Nullable error) {
-        if (nil == error) self.calls = [self.calls arrayByAddingObject:call];
-        if (handler) handler(error);
-    }];
+    else
+    {
+        __weak CallManager *weakSelf = self;
+        
+        [self.delegate callManager:self reportIncommingCall:call withAnswerHandler:^(BOOL answer) {
+            if (answer)
+            {
+                [weakSelf.callProcessor configureAudioSession];
+                [weakSelf.callProcessor answerCall:call completion:^(NSError *error) {
+                    if (nil == error) weakSelf.calls = [weakSelf.calls arrayByAddingObject:call];
+                    if (handler) handler(error);
+                }];
+            }
+            else
+            {
+                [weakSelf.callProcessor stopAudio];
+                [weakSelf.callProcessor endCall:call];
+            }
+        }];
+    }
 }
 
 - (void)startCall:(id<CallProtocol>)call completion:(CallHandler)handler
 {
     self.calls = [self.calls arrayByAddingObject:call];
-    
-    CXHandle *handle = [[CXHandle alloc] initWithType:CXHandleTypePhoneNumber value:call.handle];
-    CXStartCallAction *action = [[CXStartCallAction alloc] initWithCallUUID:call.UUID handle:handle];
-    
-    action.video = call.hasVideo;
-    
-    [self requestTransactionAction:action completion:handler];
+
+    if (CALL_KIT_AVAILABLE)
+    {
+        CXHandle *handle = [[CXHandle alloc] initWithType:CXHandleTypePhoneNumber value:call.handle];
+        CXStartCallAction *action = [[CXStartCallAction alloc] initWithCallUUID:call.UUID handle:handle];
+        
+        action.video = call.hasVideo;
+        
+        [self requestTransactionAction:action completion:handler];
+    }
+    else
+    {
+        [self.callProcessor configureAudioSession];
+        [self.callProcessor startCall:call completion:handler];
+    }
 }
 
 - (void)endCall:(id<CallProtocol>)call completion:(CallHandler)handler
 {
-    CXEndCallAction *action = [[CXEndCallAction alloc] initWithCallUUID:call.UUID];
-    
-    [self requestTransactionAction:action completion:handler];
+    if (CALL_KIT_AVAILABLE)
+    {
+        CXEndCallAction *action = [[CXEndCallAction alloc] initWithCallUUID:call.UUID];
+        
+        [self requestTransactionAction:action completion:handler];
+    }
+    else
+    {
+        [self removeCall:call];
+        [self.callProcessor stopAudio];
+        [self.callProcessor endCall:call];
+        
+        if (nil != handler) handler(nil);
+    }
 }
 
 - (void)setCall:(id<CallProtocol>)call held:(BOOL)onHold completion:(CallHandler)handler
 {
-    CXSetHeldCallAction *action = [[CXSetHeldCallAction alloc] initWithCallUUID:call.UUID onHold:onHold];
-    
-    [self requestTransactionAction:action completion:handler];
+    if (CALL_KIT_AVAILABLE)
+    {
+        CXSetHeldCallAction *action = [[CXSetHeldCallAction alloc] initWithCallUUID:call.UUID onHold:onHold];
+        
+        [self requestTransactionAction:action completion:handler];
+    }
+    else
+    {
+        call.onHold = onHold;
+        
+        [self.callProcessor setHeld:onHold];
+        
+        if (nil != handler) handler(nil);
+    }
 }
 
 - (void)setCall:(id<CallProtocol>)call muted:(BOOL)muted completion:(CallHandler)handler
 {
-    CXSetMutedCallAction *action = [[CXSetMutedCallAction alloc] initWithCallUUID:call.UUID muted:muted];
-    
-    [self requestTransactionAction:action completion:handler];
+    if (CALL_KIT_AVAILABLE)
+    {
+        CXSetMutedCallAction *action = [[CXSetMutedCallAction alloc] initWithCallUUID:call.UUID muted:muted];
+        
+        [self requestTransactionAction:action completion:handler];
+    }
+    else
+    {
+        call.muted = muted;
+        
+        [self.callProcessor setMuted:muted];
+        
+        if (nil != handler) handler(nil);
+    }
 }
 
 - (void)requestTransactionAction:(CXCallAction *)action completion:(CallHandler)handler
@@ -131,7 +199,6 @@
     configuration.supportsVideo = NO;
     configuration.maximumCallsPerCallGroup = 1;
     configuration.supportedHandleTypes = [NSSet setWithObject:@(CXHandleTypePhoneNumber)];
-    configuration.ringtoneSound = @"incoming_call.wav";
     
     return configuration;
 }

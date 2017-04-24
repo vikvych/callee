@@ -35,6 +35,7 @@ typedef void (^CallHandler)(NSError *error);
 - (void)startAudio;                 // Turn audio on
 - (void)stopAudio;                  // Turn audio off
 - (void)setMuted:(BOOL)muted;       // Mute/unmute mic
+- (void)setHeld:(BOOL)onHold;       // Pause/unpause call
 
 /**
  *  Lifecycle methods

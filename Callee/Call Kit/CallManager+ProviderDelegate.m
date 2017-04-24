@@ -81,6 +81,8 @@
     {
         call.onHold = action.isOnHold;
         
+        [self.callProcessor setHeld:action.isOnHold];
+        
         [action fulfill];
     }
     else

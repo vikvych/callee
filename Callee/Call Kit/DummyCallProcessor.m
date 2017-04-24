@@ -37,6 +37,11 @@
     NSLog(@"Dummy %@ %@", NSStringFromSelector(_cmd), muted ? @"YES" : @"NO");
 }
 
+- (void)setHeld:(BOOL)onHold
+{
+    NSLog(@"Dummy %@ %@", NSStringFromSelector(_cmd), onHold ? @"YES" : @"NO");
+}
+
 - (void)startCall:(id<CallProtocol>)call completion:(CallHandler)handler
 {
     NSLog(@"Dummy %@ %@", NSStringFromSelector(_cmd), call);

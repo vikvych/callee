@@ -6,9 +6,11 @@
 //  Copyright © 2017 Youshido. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "CallProcessor.h"
+
+#define CALL_KIT_AVAILABLE  UIDevice.currentDevice.systemVersion.floatValue > 10.0
 
 @protocol CallManagerDelegate;
 
@@ -34,5 +36,9 @@
 - (void)callManager:(CallManager *)callManager callTimeOut:(id<CallProtocol>)call;
 - (void)callManager:(CallManager *)callManager connectingCall:(id<CallProtocol>)call;
 - (void)callManager:(CallManager *)callManager connectedCall:(id<CallProtocol>)call;
+
+// Called if iOS < 10.0 delegate should show incomming call view
+- (void)callManager:(CallManager *)callManager reportIncommingCall:(id<CallProtocol>)call withAnswerHandler:(void (^)(BOOL answer))handler;
+
 
 @end
