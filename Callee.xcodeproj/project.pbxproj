@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4682950E1EAE272400A880DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682950D1EAE272400A880DC /* main.m */; };
+		468295111EAE272400A880DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295101EAE272400A880DC /* AppDelegate.m */; };
+		468295141EAE272400A880DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295131EAE272400A880DC /* ViewController.m */; };
+		468295171EAE272400A880DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468295151EAE272400A880DC /* Main.storyboard */; };
+		468295191EAE272400A880DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468295181EAE272400A880DC /* Assets.xcassets */; };
+		4682951C1EAE272400A880DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4682951A1EAE272400A880DC /* LaunchScreen.storyboard */; };
+		468295271EAE272400A880DC /* CalleeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295261EAE272400A880DC /* CalleeTests.m */; };
+		468295321EAE272400A880DC /* CalleeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295311EAE272400A880DC /* CalleeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		468295231EAE272400A880DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 468295011EAE272400A880DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 468295081EAE272400A880DC;
+			remoteInfo = Callee;
+		};
+		4682952E1EAE272400A880DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 468295011EAE272400A880DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 468295081EAE272400A880DC;
+			remoteInfo = Callee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		468295091EAE272400A880DC /* Callee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4682950D1EAE272400A880DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4682950F1EAE272400A880DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		468295101EAE272400A880DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		468295121EAE272400A880DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		468295131EAE272400A880DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		468295161EAE272400A880DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		468295181EAE272400A880DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4682951B1EAE272400A880DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4682951D1EAE272400A880DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468295221EAE272400A880DC /* CalleeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalleeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		468295261EAE272400A880DC /* CalleeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalleeTests.m; sourceTree = "<group>"; };
+		468295281EAE272400A880DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4682952D1EAE272400A880DC /* CalleeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalleeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		468295311EAE272400A880DC /* CalleeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalleeUITests.m; sourceTree = "<group>"; };
+		468295331EAE272400A880DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		468295061EAE272400A880DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4682951F1EAE272400A880DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4682952A1EAE272400A880DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		468295001EAE272400A880DC = {
+			isa = PBXGroup;
+			children = (
+				4682950B1EAE272400A880DC /* Callee */,
+				468295251EAE272400A880DC /* CalleeTests */,
+				468295301EAE272400A880DC /* CalleeUITests */,
+				4682950A1EAE272400A880DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4682950A1EAE272400A880DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				468295091EAE272400A880DC /* Callee.app */,
+				468295221EAE272400A880DC /* CalleeTests.xctest */,
+				4682952D1EAE272400A880DC /* CalleeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4682950B1EAE272400A880DC /* Callee */ = {
+			isa = PBXGroup;
+			children = (
+				4682950F1EAE272400A880DC /* AppDelegate.h */,
+				468295101EAE272400A880DC /* AppDelegate.m */,
+				468295121EAE272400A880DC /* ViewController.h */,
+				468295131EAE272400A880DC /* ViewController.m */,
+				468295151EAE272400A880DC /* Main.storyboard */,
+				468295181EAE272400A880DC /* Assets.xcassets */,
+				4682951A1EAE272400A880DC /* LaunchScreen.storyboard */,
+				4682951D1EAE272400A880DC /* Info.plist */,
+				4682950C1EAE272400A880DC /* Supporting Files */,
+			);
+			path = Callee;
+			sourceTree = "<group>";
+		};
+		4682950C1EAE272400A880DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4682950D1EAE272400A880DC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		468295251EAE272400A880DC /* CalleeTests */ = {
+			isa = PBXGroup;
+			children = (
+				468295261EAE272400A880DC /* CalleeTests.m */,
+				468295281EAE272400A880DC /* Info.plist */,
+			);
+			path = CalleeTests;
+			sourceTree = "<group>";
+		};
+		468295301EAE272400A880DC /* CalleeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				468295311EAE272400A880DC /* CalleeUITests.m */,
+				468295331EAE272400A880DC /* Info.plist */,
+			);
+			path = CalleeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		468295081EAE272400A880DC /* Callee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468295361EAE272400A880DC /* Build configuration list for PBXNativeTarget "Callee" */;
+			buildPhases = (
+				468295051EAE272400A880DC /* Sources */,
+				468295061EAE272400A880DC /* Frameworks */,
+				468295071EAE272400A880DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Callee;
+			productName = Callee;
+			productReference = 468295091EAE272400A880DC /* Callee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		468295211EAE272400A880DC /* CalleeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468295391EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeTests" */;
+			buildPhases = (
+				4682951E1EAE272400A880DC /* Sources */,
+				4682951F1EAE272400A880DC /* Frameworks */,
+				468295201EAE272400A880DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				468295241EAE272400A880DC /* PBXTargetDependency */,
+			);
+			name = CalleeTests;
+			productName = CalleeTests;
+			productReference = 468295221EAE272400A880DC /* CalleeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4682952C1EAE272400A880DC /* CalleeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4682953C1EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeUITests" */;
+			buildPhases = (
+				468295291EAE272400A880DC /* Sources */,
+				4682952A1EAE272400A880DC /* Frameworks */,
+				4682952B1EAE272400A880DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4682952F1EAE272400A880DC /* PBXTargetDependency */,
+			);
+			name = CalleeUITests;
+			productName = CalleeUITests;
+			productReference = 4682952D1EAE272400A880DC /* CalleeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		468295011EAE272400A880DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ivan Tkachenko";
+				TargetAttributes = {
+					468295081EAE272400A880DC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 64T252QKZZ;
+						ProvisioningStyle = Automatic;
+					};
+					468295211EAE272400A880DC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 64T252QKZZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 468295081EAE272400A880DC;
+					};
+					4682952C1EAE272400A880DC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 64T252QKZZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 468295081EAE272400A880DC;
+					};
+				};
+			};
+			buildConfigurationList = 468295041EAE272400A880DC /* Build configuration list for PBXProject "Callee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 468295001EAE272400A880DC;
+			productRefGroup = 4682950A1EAE272400A880DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				468295081EAE272400A880DC /* Callee */,
+				468295211EAE272400A880DC /* CalleeTests */,
+				4682952C1EAE272400A880DC /* CalleeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		468295071EAE272400A880DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4682951C1EAE272400A880DC /* LaunchScreen.storyboard in Resources */,
+				468295191EAE272400A880DC /* Assets.xcassets in Resources */,
+				468295171EAE272400A880DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468295201EAE272400A880DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4682952B1EAE272400A880DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		468295051EAE272400A880DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468295141EAE272400A880DC /* ViewController.m in Sources */,
+				468295111EAE272400A880DC /* AppDelegate.m in Sources */,
+				4682950E1EAE272400A880DC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4682951E1EAE272400A880DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468295271EAE272400A880DC /* CalleeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468295291EAE272400A880DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468295321EAE272400A880DC /* CalleeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		468295241EAE272400A880DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 468295081EAE272400A880DC /* Callee */;
+			targetProxy = 468295231EAE272400A880DC /* PBXContainerItemProxy */;
+		};
+		4682952F1EAE272400A880DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 468295081EAE272400A880DC /* Callee */;
+			targetProxy = 4682952E1EAE272400A880DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		468295151EAE272400A880DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				468295161EAE272400A880DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4682951A1EAE272400A880DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4682951B1EAE272400A880DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		468295341EAE272400A880DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		468295351EAE272400A880DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		468295371EAE272400A880DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = Callee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.Callee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		468295381EAE272400A880DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = Callee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.Callee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4682953A1EAE272400A880DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = CalleeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.CalleeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Callee.app/Callee";
+			};
+			name = Debug;
+		};
+		4682953B1EAE272400A880DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = CalleeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.CalleeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Callee.app/Callee";
+			};
+			name = Release;
+		};
+		4682953D1EAE272400A880DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = CalleeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.CalleeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Callee;
+			};
+			name = Debug;
+		};
+		4682953E1EAE272400A880DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 64T252QKZZ;
+				INFOPLIST_FILE = CalleeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshido.CalleeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Callee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		468295041EAE272400A880DC /* Build configuration list for PBXProject "Callee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468295341EAE272400A880DC /* Debug */,
+				468295351EAE272400A880DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		468295361EAE272400A880DC /* Build configuration list for PBXNativeTarget "Callee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468295371EAE272400A880DC /* Debug */,
+				468295381EAE272400A880DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		468295391EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4682953A1EAE272400A880DC /* Debug */,
+				4682953B1EAE272400A880DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4682953C1EAE272400A880DC /* Build configuration list for PBXNativeTarget "CalleeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4682953D1EAE272400A880DC /* Debug */,
+				4682953E1EAE272400A880DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 468295011EAE272400A880DC /* Project object */;
+}
