@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		4682950E1EAE272400A880DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682950D1EAE272400A880DC /* main.m */; };
 		468295111EAE272400A880DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295101EAE272400A880DC /* AppDelegate.m */; };
-		468295141EAE272400A880DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295131EAE272400A880DC /* ViewController.m */; };
 		468295171EAE272400A880DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468295151EAE272400A880DC /* Main.storyboard */; };
 		468295191EAE272400A880DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468295181EAE272400A880DC /* Assets.xcassets */; };
 		4682951C1EAE272400A880DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4682951A1EAE272400A880DC /* LaunchScreen.storyboard */; };
 		468295271EAE272400A880DC /* CalleeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295261EAE272400A880DC /* CalleeTests.m */; };
 		468295321EAE272400A880DC /* CalleeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295311EAE272400A880DC /* CalleeUITests.m */; };
+		4682956C1EAE31F800A880DC /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4682956B1EAE31F800A880DC /* CallKit.framework */; };
+		4682957C1EAE33CE00A880DC /* CallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682956F1EAE33CE00A880DC /* CallManager.m */; };
+		4682957D1EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295711EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m */; };
+		4682957E1EAE33CE00A880DC /* CallManager+ProviderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295731EAE33CE00A880DC /* CallManager+ProviderDelegate.m */; };
+		4682957F1EAE33CE00A880DC /* DummyCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295771EAE33CE00A880DC /* DummyCall.m */; };
+		468295801EAE33CE00A880DC /* DummyCallProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 468295791EAE33CE00A880DC /* DummyCallProcessor.m */; };
+		468295811EAE33CE00A880DC /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682957B1EAE33CE00A880DC /* DummyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,6 @@
 		4682950D1EAE272400A880DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4682950F1EAE272400A880DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		468295101EAE272400A880DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		468295121EAE272400A880DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		468295131EAE272400A880DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		468295161EAE272400A880DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		468295181EAE272400A880DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4682951B1EAE272400A880DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,21 @@
 		4682952D1EAE272400A880DC /* CalleeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalleeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468295311EAE272400A880DC /* CalleeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalleeUITests.m; sourceTree = "<group>"; };
 		468295331EAE272400A880DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4682956B1EAE31F800A880DC /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		4682956E1EAE33CE00A880DC /* CallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallManager.h; sourceTree = "<group>"; };
+		4682956F1EAE33CE00A880DC /* CallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallManager.m; sourceTree = "<group>"; };
+		468295701EAE33CE00A880DC /* CallManager+CallProcessorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CallManager+CallProcessorDelegate.h"; sourceTree = "<group>"; };
+		468295711EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CallManager+CallProcessorDelegate.m"; sourceTree = "<group>"; };
+		468295721EAE33CE00A880DC /* CallManager+ProviderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CallManager+ProviderDelegate.h"; sourceTree = "<group>"; };
+		468295731EAE33CE00A880DC /* CallManager+ProviderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CallManager+ProviderDelegate.m"; sourceTree = "<group>"; };
+		468295741EAE33CE00A880DC /* CallProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallProcessor.h; sourceTree = "<group>"; };
+		468295751EAE33CE00A880DC /* CallProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallProtocol.h; sourceTree = "<group>"; };
+		468295761EAE33CE00A880DC /* DummyCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyCall.h; sourceTree = "<group>"; };
+		468295771EAE33CE00A880DC /* DummyCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyCall.m; sourceTree = "<group>"; };
+		468295781EAE33CE00A880DC /* DummyCallProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyCallProcessor.h; sourceTree = "<group>"; };
+		468295791EAE33CE00A880DC /* DummyCallProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyCallProcessor.m; sourceTree = "<group>"; };
+		4682957A1EAE33CE00A880DC /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
+		4682957B1EAE33CE00A880DC /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4682956C1EAE31F800A880DC /* CallKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +105,7 @@
 				468295251EAE272400A880DC /* CalleeTests */,
 				468295301EAE272400A880DC /* CalleeUITests */,
 				4682950A1EAE272400A880DC /* Products */,
+				4682956A1EAE31F800A880DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +124,11 @@
 			children = (
 				4682950F1EAE272400A880DC /* AppDelegate.h */,
 				468295101EAE272400A880DC /* AppDelegate.m */,
-				468295121EAE272400A880DC /* ViewController.h */,
-				468295131EAE272400A880DC /* ViewController.m */,
-				468295151EAE272400A880DC /* Main.storyboard */,
 				468295181EAE272400A880DC /* Assets.xcassets */,
+				468295151EAE272400A880DC /* Main.storyboard */,
 				4682951A1EAE272400A880DC /* LaunchScreen.storyboard */,
 				4682951D1EAE272400A880DC /* Info.plist */,
+				4682956D1EAE33C100A880DC /* CallKit */,
 				4682950C1EAE272400A880DC /* Supporting Files */,
 			);
 			path = Callee;
@@ -138,6 +158,36 @@
 				468295331EAE272400A880DC /* Info.plist */,
 			);
 			path = CalleeUITests;
+			sourceTree = "<group>";
+		};
+		4682956A1EAE31F800A880DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4682956B1EAE31F800A880DC /* CallKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4682956D1EAE33C100A880DC /* CallKit */ = {
+			isa = PBXGroup;
+			children = (
+				468295751EAE33CE00A880DC /* CallProtocol.h */,
+				468295741EAE33CE00A880DC /* CallProcessor.h */,
+				4682956E1EAE33CE00A880DC /* CallManager.h */,
+				4682956F1EAE33CE00A880DC /* CallManager.m */,
+				468295701EAE33CE00A880DC /* CallManager+CallProcessorDelegate.h */,
+				468295711EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m */,
+				468295721EAE33CE00A880DC /* CallManager+ProviderDelegate.h */,
+				468295731EAE33CE00A880DC /* CallManager+ProviderDelegate.m */,
+				468295761EAE33CE00A880DC /* DummyCall.h */,
+				468295771EAE33CE00A880DC /* DummyCall.m */,
+				468295781EAE33CE00A880DC /* DummyCallProcessor.h */,
+				468295791EAE33CE00A880DC /* DummyCallProcessor.m */,
+				4682957A1EAE33CE00A880DC /* DummyViewController.h */,
+				4682957B1EAE33CE00A880DC /* DummyViewController.m */,
+			);
+			name = CallKit;
+			path = "Call Kit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +259,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 64T252QKZZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					468295211EAE272400A880DC = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -276,9 +331,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468295141EAE272400A880DC /* ViewController.m in Sources */,
 				468295111EAE272400A880DC /* AppDelegate.m in Sources */,
+				4682957E1EAE33CE00A880DC /* CallManager+ProviderDelegate.m in Sources */,
 				4682950E1EAE272400A880DC /* main.m in Sources */,
+				468295811EAE33CE00A880DC /* DummyViewController.m in Sources */,
+				468295801EAE33CE00A880DC /* DummyCallProcessor.m in Sources */,
+				4682957C1EAE33CE00A880DC /* CallManager.m in Sources */,
+				4682957F1EAE33CE00A880DC /* DummyCall.m in Sources */,
+				4682957D1EAE33CE00A880DC /* CallManager+CallProcessorDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

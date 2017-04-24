@@ -1,26 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x0K-xw-F6S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Dummy View Controller-->
+        <scene sceneID="JAy-xu-qyv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="x0K-xw-F6S" customClass="DummyViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="igq-5C-FA2"/>
+                        <viewControllerLayoutGuide type="bottom" id="W45-BC-a2y"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="VZo-F7-DZR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bka-LZ-Kkg">
+                                <rect key="frame" x="103" y="28" width="169" height="30"/>
+                                <state key="normal" title="Simulate Incomming Call"/>
+                                <connections>
+                                    <action selector="reportIncomingCall:" destination="x0K-xw-F6S" eventType="touchUpInside" id="oKg-sM-gGZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ3-XA-s67">
+                                <rect key="frame" x="109" y="66" width="157" height="30"/>
+                                <state key="normal" title="Simulate Outgoing Call"/>
+                                <connections>
+                                    <action selector="startOutgoingCall:" destination="x0K-xw-F6S" eventType="touchUpInside" id="szn-zS-S33"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmK-jG-LOZ">
+                                <rect key="frame" x="159.5" y="617" width="56" height="30"/>
+                                <state key="normal" title="End Call"/>
+                                <connections>
+                                    <action selector="endCall:" destination="x0K-xw-F6S" eventType="touchUpInside" id="bEI-EW-0Ai"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin your call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsM-MY-WI1">
+                                <rect key="frame" x="131.5" y="323" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-92-ooU">
+                                <rect key="frame" x="40" y="527" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onHoldSwitchValueChanged:" destination="x0K-xw-F6S" eventType="valueChanged" id="wbm-4q-25t"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-1Y-OSN">
+                                <rect key="frame" x="109" y="532" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YpF-kx-SPJ">
+                                <rect key="frame" x="40" y="566" width="51" height="31"/>
+                                <connections>
+                                    <action selector="mutedSwitchValueChanged:" destination="x0K-xw-F6S" eventType="valueChanged" id="KzZ-ta-a4n"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqY-18-B4B">
+                                <rect key="frame" x="109" y="571" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YpF-kx-SPJ" firstAttribute="top" secondItem="GY8-92-ooU" secondAttribute="bottom" constant="8" id="1nb-er-de6"/>
+                            <constraint firstItem="lZ3-XA-s67" firstAttribute="top" secondItem="bka-LZ-Kkg" secondAttribute="bottom" constant="8" id="8u8-4e-VAZ"/>
+                            <constraint firstItem="SqY-18-B4B" firstAttribute="leading" secondItem="YpF-kx-SPJ" secondAttribute="trailing" constant="20" id="9oP-bs-nrU"/>
+                            <constraint firstItem="SqY-18-B4B" firstAttribute="centerY" secondItem="YpF-kx-SPJ" secondAttribute="centerY" id="Kav-My-iIu"/>
+                            <constraint firstItem="jmK-jG-LOZ" firstAttribute="top" secondItem="YpF-kx-SPJ" secondAttribute="bottom" constant="20" id="M7f-63-yHv"/>
+                            <constraint firstItem="lZ3-XA-s67" firstAttribute="centerX" secondItem="VZo-F7-DZR" secondAttribute="centerX" id="Mig-Gb-JNr"/>
+                            <constraint firstItem="UsM-MY-WI1" firstAttribute="centerY" secondItem="VZo-F7-DZR" secondAttribute="centerY" id="VYA-so-Cob"/>
+                            <constraint firstItem="bka-LZ-Kkg" firstAttribute="top" secondItem="igq-5C-FA2" secondAttribute="bottom" constant="8" id="eNP-g7-T0O"/>
+                            <constraint firstItem="jmK-jG-LOZ" firstAttribute="centerX" secondItem="VZo-F7-DZR" secondAttribute="centerX" id="foY-v1-rLA"/>
+                            <constraint firstItem="UsM-MY-WI1" firstAttribute="centerX" secondItem="VZo-F7-DZR" secondAttribute="centerX" id="qHL-k3-ZRW"/>
+                            <constraint firstItem="bka-LZ-Kkg" firstAttribute="centerX" secondItem="VZo-F7-DZR" secondAttribute="centerX" id="qzW-n6-vaU"/>
+                            <constraint firstItem="9EX-1Y-OSN" firstAttribute="centerY" secondItem="GY8-92-ooU" secondAttribute="centerY" id="sc9-om-dPk"/>
+                            <constraint firstItem="9EX-1Y-OSN" firstAttribute="leading" secondItem="GY8-92-ooU" secondAttribute="trailing" constant="20" id="x58-nN-FHF"/>
+                            <constraint firstItem="YpF-kx-SPJ" firstAttribute="leading" secondItem="VZo-F7-DZR" secondAttribute="leading" constant="40" id="xwr-DN-dwb"/>
+                            <constraint firstItem="W45-BC-a2y" firstAttribute="top" secondItem="jmK-jG-LOZ" secondAttribute="bottom" constant="20" id="zes-81-cIW"/>
+                            <constraint firstItem="GY8-92-ooU" firstAttribute="leading" secondItem="VZo-F7-DZR" secondAttribute="leading" constant="40" id="zjb-hD-Xwt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endCallButton" destination="jmK-jG-LOZ" id="hQu-kc-X49"/>
+                        <outlet property="mutedSwitch" destination="YpF-kx-SPJ" id="XE3-GI-zdV"/>
+                        <outlet property="onHoldSwitch" destination="GY8-92-ooU" id="Zf4-0K-7Ed"/>
+                        <outlet property="statusLabel" destination="UsM-MY-WI1" id="QWk-5y-flL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAF-OQ-rw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1536" y="1948"/>
         </scene>
     </scenes>
 </document>
